@@ -1,0 +1,16 @@
+Discountspam:
+  spam-delay: 300 # En segundos
+  channelid: "880466011592196196"
+  message: "Recuerda que hay un descuento de un %discount% \nPuedes comprar rangos más baratos en tienda.spacemoon.es"
+Chat:
+  Activado: true
+  channelid: "884421829849149450"
+
+  MinecraftToDiscord:
+    Embed:
+      color: "AMARILLO" # AZUL | CIAN | ROJO | VERDE | AMARILLO
+      titulo: "%nick%"
+      descripcion: "%mensaje%"
+
+  DiscordToMinecraft:
+    message: "&7[&aDiscord&7] &f%nick% &0-> &7%message%"

@@ -1,0 +1,7 @@
+# Configuración básica del bot
+
+PREFIX: "!"
+STATUS: # %minecraft_online% | %discord_online%
+  - "play.spacmeoon.es"
+  - "asdasdasdasga"
+STATUS-CHANGE-DELAY: 5 # En segundos

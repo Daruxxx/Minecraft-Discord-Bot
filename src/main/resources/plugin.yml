@@ -1,0 +1,6 @@
+main: me.darux.spacebot.Main
+author: D4RUX
+version: 1.0
+name: SpaceBot
+commands:
+  spacebot:

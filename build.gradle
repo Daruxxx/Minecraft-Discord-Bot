@@ -1,0 +1,64 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:6.1.0'
+    }
+}
+
+plugins {
+    id 'com.github.johnrengelman.shadow' version '6.1.0'
+    id 'java'
+}
+
+apply plugin: 'com.github.johnrengelman.shadow'
+apply plugin: 'java'
+
+group 'me.larux'
+version '1.0-SNAPSHOT'
+
+
+sourceCompatibility = 1.8
+
+
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven {
+            url 'https://jitpack.io'
+        }
+        maven {
+            url "https://hub.spigotmc.org/nexus/content/repositories/snapshots"
+        }
+        maven {
+            url "https://oss.sonatype.org/content/repositories/snapshots"
+        }
+        maven {
+            name 'm2-dv8tion'
+            url 'https://m2.dv8tion.net/releases'
+        }
+    }
+}
+
+repositories {
+    mavenCentral() // for transitive dependencies
+    maven {
+        name 'm2-dv8tion'
+        url 'https://m2.dv8tion.net/releases'
+    }
+}
+
+dependencies {
+    implementation 'org.mongodb:mongodb-driver:3.3.0'
+    compile 'net.dv8tion:JDA:4.1.1_149'
+    shadow 'org.mongodb:mongodb-driver:3.3.0'
+    implementation 'com.github.xRaidersito.p-lib:bukkit-cmd:3e10f468d1'
+    shadow 'com.github.xRaidersito.p-lib:bukkit-cmd:3e10f468d1'
+    implementation 'com.github.raaiider.p-lib:commons-storage:c67df04c4f'
+    shadow 'com.github.raaiider.p-lib:commons-storage:c67df04c4f'
+    compileOnly 'org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

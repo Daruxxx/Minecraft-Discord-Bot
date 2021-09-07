@@ -1,0 +1,28 @@
+Ip:
+  Activado: true
+  comando: "ip" # el nombre con el que ejecutará el comando, si el prefix es ! y este path "ip" el comando será !ip
+  Embed:
+    Titulo: ":video_game: Ip del servidor :video_game: "
+    Descripcion: "Puedes acceder a nuestro servidor mediante \n\nplay.spacemoon.es"
+    Color: "VERDE" # AZUL | CIAN | ROJO | VERDE | AMARILLO
+
+Discount:
+  Activado: true
+  comando: "discount"
+
+Executecommand: # Ejecutarás un comando en el servidor de minecraft desde discord usando este comando
+  Activado: true
+  comando: "executecommand"
+  Embed:
+    Titulo: ":desktop: Has ejecutado un comando en el servidor"
+    Descripcion: "Has ejecutado el comando **%comando%** en el servidor"
+    Color: "CIAN" # AZUL | CIAN | ROJO | VERDE | AMARILLO
+
+Online:
+  Activado: true
+  comando: "online"
+  Embed:
+    Titulo: ":video_game: Personas online en el survival"
+    Color: "VERDE" # AZUL | CIAN | ROJO | VERDE | AMARILLO
+    Player-separator: "\n\n ->" # En la descripción se mostrarán todos los jugadores separado por lo que haya aquí
+
