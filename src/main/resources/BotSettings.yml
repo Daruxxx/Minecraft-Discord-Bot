@@ -1,8 +1,9 @@
 # Configuración básica del bot
 
 PREFIX: "!"
-STATUS: # %minecraft_online% | %discord_online%
+STATUS: # %minecraft_online%
   - "play.spacmeoon.es"
   - "asdasdasdasga"
-STATUS-MODE: "DND" # ONLINE | AUSENTE | DND
+SERVER-ID: "817783818886709249"
+STATUS-MODE: "ONLINE" # ONLINE | AUSENTE | DND
 STATUS-CHANGE-DELAY: 5 # En segundos

@@ -30,7 +30,6 @@ public class SpamListeners {
                 Color color= Utils.color(plugin.getFunctions().getString("Discountspam.Embed.color"));
                     EmbedBuilder eb=Utils.embedBuilder(titulo,desc,color);
                     eb.setThumbnail(plugin.getDiscord().getSelfUser().getAvatarUrl());
-                    Bukkit.broadcastMessage("a");
                 textChannel.sendMessage(eb.build()).queue();
 
 

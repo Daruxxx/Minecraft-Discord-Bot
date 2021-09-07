@@ -3,7 +3,9 @@ package me.darux.spacebot.Discord;
 import me.darux.spacebot.Main;
 import me.darux.spacebot.Utils.Utils;
 import me.darux.spacebot.file.FileCreator;
+import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.entities.Activity;
+import net.dv8tion.jda.api.entities.Member;
 import org.bukkit.Bukkit;
 
 import java.util.List;
@@ -26,11 +28,20 @@ public class Status {
                     String status=plugin.getDiscord().getPresence().getActivity().getName();
 
 
-                    if(status.equalsIgnoreCase(lista.get(i))){
+                    if(status.startsWith(lista.get(i).replaceAll("%minecraft_online%","").replace("%online%",""))){
+
+
                         if(i==lista.size()-1){
-                            plugin.getDiscord().getPresence().setActivity(Activity.playing(lista.get(0)));
+                            plugin.getDiscord().getPresence().setActivity(Activity.playing(lista.get(0)
+                            .replaceAll("%minecraft_online%",String.valueOf(Bukkit.getOnlinePlayers().size()))
+
+
+                            ));
                         }else {
-                            plugin.getDiscord().getPresence().setActivity(Activity.playing(lista.get(i + 1)));
+                            plugin.getDiscord().getPresence().setActivity(Activity.playing(lista.get(i + 1)
+                                    .replaceAll("%minecraft_online%",String.valueOf(Bukkit.getOnlinePlayers().size()))
+
+                            ));
                         }
                         return;
 
