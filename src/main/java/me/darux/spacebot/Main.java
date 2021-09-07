@@ -7,6 +7,7 @@ import me.darux.spacebot.Discord.Status;
 import me.darux.spacebot.Discord.commands.Commands;
 import me.darux.spacebot.Discord.listener.DiscordToMc;
 import me.darux.spacebot.Discord.listener.SpamListeners;
+import me.darux.spacebot.Utils.Utils;
 import me.darux.spacebot.commands.SpaceBot;
 import me.darux.spacebot.file.FileCreator;
 import me.darux.spacebot.listeners.MinecraftToDiscord;
@@ -60,7 +61,7 @@ File folder=new File("plugins/SpaceBot/data/");
         try {
             discord=JDABuilder.createDefault("ODg0MTY4Nzc2NzIyMDI2NTI3.YTUkVw.Hk0UuQ6y2cADr2rjm0cDyKcluRQ")
                     .setActivity(Activity.playing(getBotsettings().getStringList("STATUS").get(1)))
-                    .setStatus(OnlineStatus.DO_NOT_DISTURB)
+                    .setStatus(Utils.status(getBotsettings().getString("STATUS-MODE")))
                     .addEventListeners(new Commands(this))
                     .addEventListeners(new DiscordToMc(this))
                     .build();
@@ -78,7 +79,7 @@ File folder=new File("plugins/SpaceBot/data/");
 
     public void onDisable(){
 
-        
+        getDiscord().shutdown();
 
     }
 

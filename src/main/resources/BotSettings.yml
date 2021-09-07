@@ -4,4 +4,5 @@ PREFIX: "!"
 STATUS: # %minecraft_online% | %discord_online%
   - "play.spacmeoon.es"
   - "asdasdasdasga"
+STATUS-MODE: "DND" # ONLINE | AUSENTE | DND
 STATUS-CHANGE-DELAY: 5 # En segundos

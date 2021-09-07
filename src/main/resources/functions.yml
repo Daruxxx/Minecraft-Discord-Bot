@@ -1,7 +1,10 @@
 Discountspam:
   spam-delay: 300 # En segundos
   channelid: "880466011592196196"
-  message: "Recuerda que hay un descuento de un %discount% \nPuedes comprar rangos más baratos en tienda.spacemoon.es"
+  Embed:
+    title: ":shopping_cart:  Descuento del %discount% en la tienda :shopping_cart: "
+    description: "Hay un descuento activo en nuestra tienda del %discount% \n para acceder a ella [click aquí](https://spacemoon.tebex.io)"
+    color: "AZUL" # AZUL | CIAN | ROJO | VERDE | AMARILLO
 Chat:
   Activado: true
   channelid: "884421829849149450"

@@ -2,6 +2,7 @@ package me.darux.spacebot.Utils;
 
 import me.darux.spacebot.Main;
 import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.OnlineStatus;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
 
@@ -49,6 +50,25 @@ public static EmbedBuilder embedBuilder(String titulo, String desc, Color color)
         eb.setColor(color);
         eb.setFooter("SpaceMc Bot ");
         return eb;
+}
+
+public static OnlineStatus status(String a){
+    OnlineStatus onlineStatus=OnlineStatus.DO_NOT_DISTURB;
+
+        switch (a){
+            case "DND":
+                onlineStatus=OnlineStatus.DO_NOT_DISTURB;
+                break;
+            case "ONLINE":
+                onlineStatus=OnlineStatus.ONLINE;
+                break;
+            case "AUSENTE":
+                onlineStatus=OnlineStatus.IDLE;
+                break;
+
+        }
+
+        return onlineStatus;
 }
 
 }
