@@ -1,18 +1,12 @@
 package me.darux.spacebot.Discord.listener;
 
 import me.darux.spacebot.Main;
-import me.darux.spacebot.Utils.Utils;
-import me.darux.spacebot.file.FileCreator;
-import net.dv8tion.jda.api.entities.MessageChannel;
+import me.darux.spacebot.Minecraft.file.FileCreator;
 import net.dv8tion.jda.api.entities.TextChannel;
-import net.dv8tion.jda.api.events.guild.member.GuildMemberRoleAddEvent;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
-import net.md_5.bungee.api.ChatColor;
+import org.apache.commons.lang.ObjectUtils;
 import org.bukkit.Bukkit;
-import org.bukkit.configuration.file.FileConfiguration;
-
-import java.awt.image.ReplicateScaleFilter;
 
 public class DiscordToMc extends ListenerAdapter {
     private Main plugin;
@@ -27,17 +21,22 @@ public class DiscordToMc extends ListenerAdapter {
             return;
         }
         TextChannel channel=plugin.getDiscord().getTextChannelById(plugin.getFunctions().getString("Chat.channelid"));
-        if(e.getChannel().getId().equals(channel.getId())){
-            FileCreator functions= plugin.getFunctions();
+        try {
+            if(e.getChannel().getId().equals(channel.getId())){
+                FileCreator functions= plugin.getFunctions();
 
-            Bukkit.broadcastMessage(functions.getString("Chat.DiscordToMinecraft.message")
-            .replace("%nick%",e.getAuthor().getName())
-                            .replace("%message%",e.getMessage().getContentRaw())
+                Bukkit.broadcastMessage(functions.getString("Chat.DiscordToMinecraft.message")
+                        .replace("%nick%",e.getAuthor().getName())
+                        .replace("%message%",e.getMessage().getContentRaw())
 
-            );
+                );
 
 
+            }
+        }catch (NullPointerException ee){
+            return;
         }
+
     }
 
 

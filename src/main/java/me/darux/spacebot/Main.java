@@ -5,26 +5,23 @@ package me.darux.spacebot;
 
 import me.darux.spacebot.Discord.Status;
 import me.darux.spacebot.Discord.commands.Commands;
+import me.darux.spacebot.Discord.commands.SyncCommand;
 import me.darux.spacebot.Discord.listener.DiscordToMc;
 import me.darux.spacebot.Discord.listener.SpamListeners;
-import me.darux.spacebot.Utils.Utils;
-import me.darux.spacebot.commands.SpaceBot;
-import me.darux.spacebot.file.FileCreator;
-import me.darux.spacebot.listeners.MinecraftToDiscord;
+import me.darux.spacebot.Minecraft.Utils.Utils;
+import me.darux.spacebot.Minecraft.commands.SpaceBot;
+import me.darux.spacebot.Minecraft.commands.SyncCMD;
+import me.darux.spacebot.Minecraft.file.FileCreator;
+import me.darux.spacebot.Minecraft.listeners.MinecraftToDiscord;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
-import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.entities.Activity;
-import net.dv8tion.jda.api.utils.cache.CacheFlag;
-import org.bukkit.Bukkit;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-import sun.jvm.hotspot.gc.shared.Space;
 
-import javax.print.attribute.standard.Compression;
 import javax.security.auth.login.LoginException;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -37,8 +34,9 @@ private FileCreator commands;
 private FileCreator data;
 private FileCreator temporaldata;
 private FileCreator functions;
-
+private FileCreator syncs;
 File folder=new File("plugins/SpaceBot/data/");
+List<String> sync=new ArrayList<>();
 
 
 
@@ -47,6 +45,7 @@ File folder=new File("plugins/SpaceBot/data/");
 
     public void onEnable(){
         folder.mkdir();
+        syncs=new FileCreator(this,"syncs");
         botsettings=new FileCreator(this,"BotSettings",".yml");
         commands=new FileCreator(this,"commands");
         data=new FileCreator(this,"data",".yml",folder);
@@ -60,10 +59,12 @@ File folder=new File("plugins/SpaceBot/data/");
 
         try {
             discord=JDABuilder.createDefault("ODg0MTY4Nzc2NzIyMDI2NTI3.YTUkVw.Hk0UuQ6y2cADr2rjm0cDyKcluRQ")
-                    .setActivity(Activity.playing(getBotsettings().getStringList("STATUS").get(1)))
+                    .setActivity(Activity.playing(getBotsettings().getStringList("STATUS").get(0)))
                     .setStatus(Utils.status(getBotsettings().getString("STATUS-MODE")))
                     .addEventListeners(new Commands(this))
                     .addEventListeners(new DiscordToMc(this))
+                    .addEventListeners(new SyncCommand(this))
+
                     .build();
 
 
@@ -87,6 +88,9 @@ File folder=new File("plugins/SpaceBot/data/");
 
     public void registrarComandos() {
         this.getCommand("spacebot").setExecutor(new SpaceBot(this));
+        this.getCommand("sync").setExecutor(new SyncCMD(this));
+
+
 
     }
 
@@ -119,5 +123,17 @@ File folder=new File("plugins/SpaceBot/data/");
 
     public FileCreator getTemporaldata() {
         return temporaldata;
+    }
+
+    public List<String> getSync() {
+        return sync;
+    }
+
+    public void setSync(List<String> sync) {
+        this.sync = sync;
+    }
+
+    public FileCreator getSyncs() {
+        return syncs;
     }
 }

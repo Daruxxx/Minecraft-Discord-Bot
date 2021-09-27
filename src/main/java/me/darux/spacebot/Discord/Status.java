@@ -1,11 +1,9 @@
 package me.darux.spacebot.Discord;
 
 import me.darux.spacebot.Main;
-import me.darux.spacebot.Utils.Utils;
-import me.darux.spacebot.file.FileCreator;
-import net.dv8tion.jda.api.OnlineStatus;
+import me.darux.spacebot.Minecraft.Utils.Utils;
+import me.darux.spacebot.Minecraft.file.FileCreator;
 import net.dv8tion.jda.api.entities.Activity;
-import net.dv8tion.jda.api.entities.Member;
 import org.bukkit.Bukkit;
 
 import java.util.List;

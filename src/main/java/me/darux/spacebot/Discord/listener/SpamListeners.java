@@ -1,8 +1,8 @@
 package me.darux.spacebot.Discord.listener;
 
 import me.darux.spacebot.Main;
-import me.darux.spacebot.Utils.Utils;
-import me.darux.spacebot.file.FileCreator;
+import me.darux.spacebot.Minecraft.Utils.Utils;
+import me.darux.spacebot.Minecraft.file.FileCreator;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.TextChannel;
 import org.bukkit.Bukkit;

@@ -1,21 +1,17 @@
 package me.darux.spacebot.Discord.commands;
 
 import me.darux.spacebot.Main;
-import me.darux.spacebot.Utils.Utils;
-import me.darux.spacebot.file.FileCreator;
+import me.darux.spacebot.Minecraft.Utils.Utils;
+import me.darux.spacebot.Minecraft.file.FileCreator;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.entities.MessageChannel;
-import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
 import java.awt.*;
-import java.nio.channels.Channel;
-import java.time.temporal.TemporalAccessor;
-import java.time.temporal.TemporalField;
 
 public class Commands extends ListenerAdapter {
     private Main plugin;
