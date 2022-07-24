@@ -61,7 +61,7 @@ List<String> sync=new ArrayList<String>();
         try {
 
 
-            //login bot
+            
             discord=JDABuilder.createDefault(getBotsettings().getString("TOKEN"))
                     .setActivity(Activity.playing(getBotsettings().getStringList("STATUS").get(0)))
                     .setStatus(Utils.status(getBotsettings().getString("STATUS-MODE")))
