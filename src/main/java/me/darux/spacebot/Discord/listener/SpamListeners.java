@@ -1,6 +1,6 @@
 package me.darux.spacebot.Discord.listener;
 
-import me.darux.spacebot.SpaceBotMain;
+import me.darux.spacebot.Main;
 import me.darux.spacebot.Minecraft.Utils.Utils;
 import me.darux.spacebot.Minecraft.file.FileCreator;
 import net.dv8tion.jda.api.EmbedBuilder;
@@ -10,9 +10,9 @@ import org.bukkit.Bukkit;
 import java.awt.*;
 
 public class SpamListeners {
-    private SpaceBotMain plugin;
+    private Main plugin;
 
-    public SpamListeners(SpaceBotMain plugin) {
+    public SpamListeners(Main plugin) {
         this.plugin = plugin;
     }
 

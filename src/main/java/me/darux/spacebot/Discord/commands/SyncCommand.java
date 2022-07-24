@@ -2,7 +2,7 @@ package me.darux.spacebot.Discord.commands;
 
 import me.darux.spacebot.CooldownManager;
 import me.darux.spacebot.Discord.Utils.Comando;
-import me.darux.spacebot.SpaceBotMain;
+import me.darux.spacebot.Main;
 import me.darux.spacebot.Minecraft.Utils.Utils;
 import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
@@ -17,9 +17,9 @@ import org.bukkit.entity.Player;
 
 
 public class SyncCommand extends ListenerAdapter {
-    private SpaceBotMain plugin;
+    private Main plugin;
 
-    public SyncCommand(SpaceBotMain plugin) {
+    public SyncCommand(Main plugin) {
         this.plugin = plugin;
     }
 

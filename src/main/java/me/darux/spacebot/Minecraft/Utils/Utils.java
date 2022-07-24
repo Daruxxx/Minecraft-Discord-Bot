@@ -1,6 +1,6 @@
 package me.darux.spacebot.Minecraft.Utils;
 
-import me.darux.spacebot.SpaceBotMain;
+import me.darux.spacebot.Main;
 import me.darux.spacebot.Minecraft.file.FileCreator;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.OnlineStatus;
@@ -9,9 +9,9 @@ import net.md_5.bungee.api.ChatColor;
 import java.awt.*;
 
 public class Utils {
-    private SpaceBotMain plugin;
+    private Main plugin;
 
-    public Utils(SpaceBotMain plugin) {
+    public Utils(Main plugin) {
         this.plugin = plugin;
     }
 
@@ -76,7 +76,7 @@ public static String getSyncByDiscord(String tag){
 return string;
 }
 
-public static String getSyncByMinecraft(String nick, SpaceBotMain plugin){
+public static String getSyncByMinecraft(String nick, Main plugin){
 
         String string="";
         FileCreator config= plugin.getSyncs();

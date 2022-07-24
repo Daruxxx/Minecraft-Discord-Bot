@@ -1,6 +1,6 @@
 package me.darux.spacebot.Discord.listener;
 
-import me.darux.spacebot.SpaceBotMain;
+import me.darux.spacebot.Main;
 import me.darux.spacebot.Minecraft.file.FileCreator;
 import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
@@ -8,9 +8,9 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.bukkit.Bukkit;
 
 public class DiscordToMc extends ListenerAdapter {
-    private SpaceBotMain plugin;
+    private Main plugin;
 
-    public DiscordToMc(SpaceBotMain plugin) {
+    public DiscordToMc(Main plugin) {
         this.plugin = plugin;
     }
 

@@ -1,6 +1,6 @@
 package me.darux.spacebot.Discord.Utils;
 
-import me.darux.spacebot.SpaceBotMain;
+import me.darux.spacebot.Main;
 import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.entities.MessageChannel;
 import net.dv8tion.jda.api.entities.User;
@@ -15,9 +15,9 @@ public class Comando {
     MessageChannel channel;
     String message;
     User author;
-    SpaceBotMain plugin;
+    Main plugin;
 
-    public Comando(String nombre, String[] alias, Permission permission, Member miembro, MessageChannel channel, String message, User author, SpaceBotMain plugin) {
+    public Comando(String nombre, String[] alias, Permission permission, Member miembro, MessageChannel channel, String message, User author, Main plugin) {
         this.nombre = nombre;
         this.alias = alias;
         this.permission = permission;

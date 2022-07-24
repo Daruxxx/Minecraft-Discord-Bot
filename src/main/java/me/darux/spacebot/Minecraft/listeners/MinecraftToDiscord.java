@@ -1,6 +1,6 @@
 package me.darux.spacebot.Minecraft.listeners;
 
-import me.darux.spacebot.SpaceBotMain;
+import me.darux.spacebot.Main;
 import me.darux.spacebot.Minecraft.Utils.Utils;
 import me.darux.spacebot.Minecraft.file.FileCreator;
 import net.dv8tion.jda.api.EmbedBuilder;
@@ -11,9 +11,9 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 public class MinecraftToDiscord implements Listener {
-    private SpaceBotMain plugin;
+    private Main plugin;
 
-    public MinecraftToDiscord(SpaceBotMain plugin) {
+    public MinecraftToDiscord(Main plugin) {
         this.plugin = plugin;
     }
 

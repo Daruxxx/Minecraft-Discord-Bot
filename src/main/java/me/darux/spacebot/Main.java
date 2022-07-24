@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class SpaceBotMain extends JavaPlugin {
+public class Main extends JavaPlugin {
 
 
 private JDA discord;
