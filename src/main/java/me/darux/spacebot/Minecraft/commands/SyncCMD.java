@@ -1,11 +1,9 @@
 package me.darux.spacebot.Minecraft.commands;
 
-import me.darux.spacebot.Main;
+import me.darux.spacebot.SpaceBotMain;
 import me.darux.spacebot.Minecraft.Utils.Utils;
 import me.darux.spacebot.Minecraft.file.FileCreator;
 import net.dv8tion.jda.api.JDA;
-import net.dv8tion.jda.api.entities.Member;
-import net.dv8tion.jda.api.entities.User;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -15,9 +13,9 @@ import org.bukkit.entity.Player;
 import java.util.List;
 
 public class SyncCMD implements CommandExecutor {
-    private Main plugin;
+    private SpaceBotMain plugin;
 
-    public SyncCMD(Main plugin) {
+    public SyncCMD(SpaceBotMain plugin) {
         this.plugin = plugin;
     }
 

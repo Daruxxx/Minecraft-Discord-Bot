@@ -1,4 +1,4 @@
-main: me.darux.spacebot.Main
+main: me.darux.spacebot.SpaceBotMain
 author: D4RUX
 version: 1.0
 name: SpaceBot

@@ -5,9 +5,9 @@ import org.bukkit.Bukkit;
 import java.util.List;
 
 public class CooldownManager {
-    private Main plugin;
+    private SpaceBotMain plugin;
 
-    public CooldownManager(Main plugin) {
+    public CooldownManager(SpaceBotMain plugin) {
         this.plugin = plugin;
     }
 

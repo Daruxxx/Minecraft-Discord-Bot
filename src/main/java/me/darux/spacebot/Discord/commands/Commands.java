@@ -1,6 +1,6 @@
 package me.darux.spacebot.Discord.commands;
 
-import me.darux.spacebot.Main;
+import me.darux.spacebot.SpaceBotMain;
 import me.darux.spacebot.Minecraft.Utils.Utils;
 import me.darux.spacebot.Minecraft.file.FileCreator;
 import net.dv8tion.jda.api.EmbedBuilder;
@@ -14,9 +14,9 @@ import org.bukkit.entity.Player;
 import java.awt.*;
 
 public class Commands extends ListenerAdapter {
-    private Main plugin;
+    private SpaceBotMain plugin;
 
-    public Commands(Main plugin) {
+    public Commands(SpaceBotMain plugin) {
         this.plugin = plugin;
     }
 

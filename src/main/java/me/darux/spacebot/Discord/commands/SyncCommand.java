@@ -2,33 +2,24 @@ package me.darux.spacebot.Discord.commands;
 
 import me.darux.spacebot.CooldownManager;
 import me.darux.spacebot.Discord.Utils.Comando;
-import me.darux.spacebot.Main;
+import me.darux.spacebot.SpaceBotMain;
 import me.darux.spacebot.Minecraft.Utils.Utils;
-import me.darux.spacebot.Minecraft.file.FileCreator;
 import net.dv8tion.jda.api.Permission;
-import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
-import net.dv8tion.jda.api.utils.WidgetUtil;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.ComponentBuilder;
 import net.md_5.bungee.api.chat.HoverEvent;
 import net.md_5.bungee.api.chat.TextComponent;
-import org.bson.AbstractBsonReader;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
-import java.awt.*;
-import java.sql.Array;
-import java.util.ArrayList;
-import java.util.UUID;
-
 
 public class SyncCommand extends ListenerAdapter {
-    private Main plugin;
+    private SpaceBotMain plugin;
 
-    public SyncCommand(Main plugin) {
+    public SyncCommand(SpaceBotMain plugin) {
         this.plugin = plugin;
     }
 

@@ -1,5 +1,5 @@
 # Configuración básica del bot
-
+TOKEN: "YOUR-TOKEN"
 PREFIX: "!"
 STATUS: # %minecraft_online%
   - "play.spacmeoon.es"

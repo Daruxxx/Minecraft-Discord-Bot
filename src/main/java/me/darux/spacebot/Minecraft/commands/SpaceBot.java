@@ -1,15 +1,15 @@
 package me.darux.spacebot.Minecraft.commands;
 
-import me.darux.spacebot.Main;
 import me.darux.spacebot.Minecraft.Utils.Utils;
+import me.darux.spacebot.SpaceBotMain;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
 public class SpaceBot implements CommandExecutor {
-    private Main plugin;
+    private SpaceBotMain plugin;
 
-    public SpaceBot(Main plugin) {
+    public SpaceBot(SpaceBotMain plugin) {
         this.plugin = plugin;
     }
 

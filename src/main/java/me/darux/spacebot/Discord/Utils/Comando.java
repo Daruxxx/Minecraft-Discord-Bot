@@ -1,13 +1,10 @@
 package me.darux.spacebot.Discord.Utils;
 
-import me.darux.spacebot.Main;
+import me.darux.spacebot.SpaceBotMain;
 import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.entities.MessageChannel;
-import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.entities.User;
-import net.dv8tion.jda.api.utils.WidgetUtil;
 import net.dv8tion.jda.api.entities.Member;
-import org.bukkit.Bukkit;
 
 public class Comando {
 
@@ -18,9 +15,9 @@ public class Comando {
     MessageChannel channel;
     String message;
     User author;
-    Main plugin;
+    SpaceBotMain plugin;
 
-    public Comando(String nombre, String[] alias, Permission permission, Member miembro, MessageChannel channel, String message, User author, Main plugin) {
+    public Comando(String nombre, String[] alias, Permission permission, Member miembro, MessageChannel channel, String message, User author, SpaceBotMain plugin) {
         this.nombre = nombre;
         this.alias = alias;
         this.permission = permission;

@@ -1,6 +1,6 @@
 package me.darux.spacebot.Discord;
 
-import me.darux.spacebot.Main;
+import me.darux.spacebot.SpaceBotMain;
 import me.darux.spacebot.Minecraft.Utils.Utils;
 import me.darux.spacebot.Minecraft.file.FileCreator;
 import net.dv8tion.jda.api.entities.Activity;
@@ -9,9 +9,9 @@ import org.bukkit.Bukkit;
 import java.util.List;
 
 public class Status {
-    private Main plugin;
+    private SpaceBotMain plugin;
 
-    public Status(Main plugin) {
+    public Status(SpaceBotMain plugin) {
         this.plugin = plugin;
     }
 
